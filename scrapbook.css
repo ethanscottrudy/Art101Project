@@ -1,0 +1,32 @@
+#scrapbookPage {
+    background-image: url(myscrapbookPage2.jpg);
+    position: relative;
+}
+
+#stickerBox {
+    display: flex;
+    width: 550px;
+    top: 490px;
+    left: 170px;
+    position: absolute;
+    flex-wrap: wrap;
+}
+
+.sticker {
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    z-index: 1;
+}
+
+.active {
+    z-index: 2;
+}
+
+#colorPickerBG {
+    width: 300px;
+    height: 50px;
+    left: 550px;
+    top: 200px;
+    position: absolute;
+}
