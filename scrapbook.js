@@ -1,7 +1,7 @@
 //on down press
-    //make object follow mouse
+//make object follow mouse
 //on release
-    //object stops
+//object stops
 
 //display one sticker sheet
 //button that on click
@@ -9,14 +9,14 @@
 //                 |
 //                 V
 $('.sticker').on('mousedown', function (e) {
-    
+
     var $this = $(this);
 
     $this.addClass('active');
-    
+
     var oTop = e.pageY - $('.active').offset().top;
     var oLeft = e.pageX - $('.active').offset().left;
-    
+
     $(this).parents().on('mousemove', function (e) {
 
         $('.active').offset({
@@ -25,15 +25,24 @@ $('.sticker').on('mousedown', function (e) {
             left: e.pageX - oLeft
 
         })
-             
+
     });
-    
+
     $('body').on('mouseup', function () {
 
         $this.removeClass('active');
         $('body').unbind('mouseup');
 
     });
-    
-    return false;    
+
+    return false;
 });
+//Unfinished code for setting the background color
+// function retrieveColor () {
+// let selectedColor
+// $("#colorPickerBG").value
+// }
+
+// function stickerBGColor() {
+//     $("#stickerBG").css(selectedColor)
+// }
