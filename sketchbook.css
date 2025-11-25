@@ -1,0 +1,29 @@
+#stickerSheet {
+    display:flex;
+    background: grey;
+    height: 900px;
+    width:500px;
+}
+
+#interactionPage {
+background: blue;
+height: 900px;
+width: 1420px;
+}
+
+.sketchPage {
+    display: flex;
+}
+
+.sticker {
+height: 50px;
+width: 50px;
+background: orange;
+margin: 5px;
+z-index: 1;
+}
+
+.active {
+    z-index: 2;
+    background-color: rgb(230, 168, 89);
+}
