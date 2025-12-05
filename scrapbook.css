@@ -1,4 +1,6 @@
 #scrapbookPage {
+    /* background-size: cover;
+    background-repeat: no-repeat; */
     background-image: url(myscrapbookPage2.jpg);
     position: relative;
 }
@@ -29,4 +31,14 @@
     left: 550px;
     top: 200px;
     position: absolute;
+}
+
+#stickerBG {
+    height: 585px;
+    width: 755px;
+    background-color: #DBC8C8;
+    position: absolute;
+    left: 1059px;
+    top: 250px;
+    border-radius: 10px;
 }

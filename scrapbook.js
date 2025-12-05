@@ -1,14 +1,29 @@
-//on down press
-//make object follow mouse
-//on release
-//object stops
 
-//display one sticker sheet
-//button that on click
+const stickerArray = [
+    "blueCrescentStar","blueMoon","blueMusicNote","blueSquare",
+    "blueStarSilhouette","greenCircle","greenSproutSilhouette",
+    "orangeHeartSilhouette","orangeHeartTrio","orangeNote","pinkStarSilhouette",
+    "purpleMoonSilhouette","purpleRubble","purpleStar","redFlower","redSwoosh","yellowCrown"
+];
+
+function randomizeStickerSheet() {
+for(var i = 0; i < 15; i++) {
+const random = Math.floor(Math.random() * stickerArray.length);
+$("#stickerBox").append(`<img src="stickerSheets/${stickerArray[random]}Sticker.png" class="sticker"></img>`)
+console.log(random, stickerArray[random]) 
+};  
+};
+
+function changeBGColor() { 
+        let selectedColor = $("#colorPickerBG").val();
+        $("#stickerBG").css("background-color", selectedColor);
+        console.log(selectedColor)
+        return selectedColor
+};
 // courtesy of noahgelmen on the CSS Tricks forum. https://css-tricks.com/forums/topic/cursor-position-on-draggable-element/
 //                 |
 //                 V
-$('.sticker').on('mousedown', function (e) {
+function pickupSticker (e) {
 
     var $this = $(this);
 
@@ -36,13 +51,10 @@ $('.sticker').on('mousedown', function (e) {
     });
 
     return false;
-});
-//Unfinished code for setting the background color
-// function retrieveColor () {
-// let selectedColor
-// $("#colorPickerBG").value
-// }
+};
 
-// function stickerBGColor() {
-//     $("#stickerBG").css(selectedColor)
-// }
+$(document).ready(randomizeStickerSheet);
+
+$('.sticker').on('mousedown', pickupSticker);
+
+$("#colorPickerBG").change(changeBGColor);
