@@ -1,8 +1,14 @@
-#scrapbookPage {
-    /* background-size: cover;
-    background-repeat: no-repeat; */
+#scrapbook {
+    background-repeat: no-repeat;
     background-image: url(myscrapbookPage2.jpg);
-    position: relative;
+    position: fixed;
+    width: 100%;
+}
+
+#landingPage {
+    background-image: url(myScrapbookTitlePage.JPEG);
+    position: fixed;
+    width:100%;
 }
 
 #stickerBox {
@@ -10,7 +16,7 @@
     width: 550px;
     top: 490px;
     left: 170px;
-    position: absolute;
+    position: relative;
     flex-wrap: wrap;
 }
 
@@ -19,6 +25,7 @@
     width: 100px;
     margin: 5px;
     z-index: 1;
+    background-color:aqua;
 }
 
 .active {
@@ -42,3 +49,10 @@
     top: 250px;
     border-radius: 10px;
 }
+
+#startButton {
+    width: 35%;
+    position: fixed;
+    left: 650px;
+    top: 400px;
+};
