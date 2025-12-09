@@ -8,32 +8,35 @@ const stickerArray = [
     "purpleGreenFlowers", "moonPhases", "orangeButton", "blueBox", 
     "blueShoe", "blueShape", "blueHeart", "blueFire"
 ];
-const pageTitle = [
-    "landingPage","showcase","scrapbook","reverseCover"
-]
+
+
 
 const wholeBook = {
     titlePage:
-    `<body id="landingPage">
-    </body`,
-    showcase:
-    `<body id="showcase"></body>`,
+    `<img src="buttonIcons/start.PNG" class="nextPage" id="startButton">`,
+    exampleA:
+    `<img src="buttonIcons/next.png" class="nextPage nextButton">
+    <img src="buttonIcons/back.png" class="prevPage prevButton">`,
+    exampleB:`
+    <img src="buttonIcons/next.png" class="nextPage nextButton">
+    <img src="buttonIcons/back.png" class="prevPage prevButton">`,
     scrapbook:`
+    <img src="buttonIcons/next.png" class="nextPage nextButton">
+    <img src="buttonIcons/back.png" class="prevPage prevButton">
     <input id="colorPickerBG" type="color" value="#DBC8C8">
     <div id="stickerBox">
     </div>
-    <button id="randoStickers">Shuffle</button>
+    <img src="A5D0B35B-9EBF-4214-BAF0-3FE28AEAEF02.PNG" id="randoStickers">
     <div id="stickerBG"></div>`,
     reverseCover:
-    `<body id="reverseCover"></body>`
+    `<img src="buttonIcons/next.png" class="nextPage nextButton">
+    <img src="buttonIcons/back.png" class="prevPage prevButton">`,
+    
 };
 
-function turnPageForward() {
-$("body").attr("id",pageTitle[2])
-$("body").html(wholeBook.scrapbook)
-console.log(wholeBook.scrapbook)
-console.log(pageTitle[2])
-};
+var properties = Object.keys(wholeBook);
+
+var currentIndex = 0;
 
 function randomizeStickerSheet() {
 $("#stickerBox").html("")
@@ -51,11 +54,41 @@ function changeBGColor() {
         console.log(selectedColor)
         return selectedColor
 };
+
+function renderCurrentPage() {
+    if (properties.length > 0) {
+        var currentKey = properties[currentIndex];
+        var currentValue = wholeBook[currentKey];
+        $('body').attr('id', currentKey);
+        $('body').html(currentValue);
+    }
+};
+
+$(document).on('click','.nextPage', function nextPage() {
+            if (properties.length > 0) {
+                currentIndex = (currentIndex + 1) % properties.length;
+                renderCurrentPage();
+            } else {
+                $('body').html("<p>Object has no properties.</p>");
+            
+            }
+        });
+
+$(document).on('click','.prevPage', function prevPage() {
+            if (properties.length > 0) {
+                currentIndex = (currentIndex - 1 + properties.length) % properties.length;
+                renderCurrentPage();
+            } else {
+                $('body').html("<p>Object has no properties.</p>");
+            
+            }
+            console.log(currentValue)
+            return currentValue
+        });
+
 // courtesy of noahgelmen on the CSS Tricks forum. https://css-tricks.com/forums/topic/cursor-position-on-draggable-element/
 //                 |
 //                 V
-$(document).on('click','#pageTurn',turnPageForward)
-$(document).on('click','#startButton',turnPageForward)
 $(document).on('click','#randoStickers',randomizeStickerSheet);
 $(document).on('change','#colorPickerBG',changeBGColor);
 $(document).on('mousedown','.sticker', function (e) {
@@ -87,3 +120,5 @@ $(document).on('mousedown','.sticker', function (e) {
 
     return false;
 });
+
+renderCurrentPage();

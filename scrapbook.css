@@ -5,10 +5,39 @@
     width: 100%;
 }
 
-#landingPage {
+#exampleA {
+    background-repeat: no-repeat;
+    background-image: url(tiagoHarryArt.JPEG);
+    position: static;
+    width: 50%;
+}
+
+#exampleB {
+    background-repeat: no-repeat;
+    background-image: url(lurAshleyArt.JPEG);
+    position:static;
+    width: 100%;
+}
+
+#titlePage {
     background-image: url(myScrapbookTitlePage.JPEG);
     position: fixed;
     width:100%;
+}
+
+.nextButton {
+    width: 20%;
+    right: 40px;
+    top: 700px;
+    position: fixed;
+}
+
+.prevButton {
+    width: 15%;
+    left: 40px;
+    top: 750px;
+    position: fixed;
+    z-index: 1;
 }
 
 #stickerBox {
@@ -25,7 +54,6 @@
     width: 100px;
     margin: 5px;
     z-index: 1;
-    background-color:aqua;
 }
 
 .active {
@@ -55,4 +83,17 @@
     position: fixed;
     left: 650px;
     top: 400px;
-};
+}
+
+#randoStickers{
+width: 200px;
+top: 200px;
+left: 600px;
+position: fixed;
+}
+
+#reverseCover {
+    background-image: url(myScrapbookEndScreen.JPEG);
+    position: fixed;
+    width: 80%;
+}
