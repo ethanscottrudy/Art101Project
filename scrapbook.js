@@ -15,22 +15,22 @@ const wholeBook = {
     titlePage:
     `<img src="buttonIcons/start.PNG" class="nextPage" id="startButton">`,
     exampleA:
-    `<img src="buttonIcons/next.png" class="nextPage nextButton">
-    <img src="buttonIcons/back.png" class="prevPage prevButton">`,
+    `<img src="buttonIcons/next.PNG" class="nextPage nextButton">
+    <img src="buttonIcons/back.PNG" class="prevPage prevButton">`,
     exampleB:`
-    <img src="buttonIcons/next.png" class="nextPage nextButton">
-    <img src="buttonIcons/back.png" class="prevPage prevButton">`,
+    <img src="buttonIcons/next.PNG" class="nextPage nextButton">
+    <img src="buttonIcons/back.PNG" class="prevPage prevButton">`,
     scrapbook:`
-    <img src="buttonIcons/next.png" class="nextPage nextButton">
-    <img src="buttonIcons/back.png" class="prevPage prevButton">
+    <img src="buttonIcons/next.PNG" class="nextPage nextButton">
+    <img src="buttonIcons/back.PNG" class="prevPage prevButton">
     <input id="colorPickerBG" type="color" value="#DBC8C8">
     <div id="stickerBox">
     </div>
     <img src="A5D0B35B-9EBF-4214-BAF0-3FE28AEAEF02.PNG" id="randoStickers">
     <div id="stickerBG"></div>`,
     reverseCover:
-    `<img src="buttonIcons/next.png" class="nextPage nextButton">
-    <img src="buttonIcons/back.png" class="prevPage prevButton">`,
+    `<img src="buttonIcons/next.PNG" class="nextPage nextButton">
+    <img src="buttonIcons/back.PNG" class="prevPage prevButton">`,
     
 };
 
