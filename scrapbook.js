@@ -5,7 +5,7 @@ const stickerArray = [
     "orangeHeartSilhouette","orangeHeartTrio","orangeNote","pinkStarSilhouette",
     "purpleMoonSilhouette","purpleRubble","purpleStar","redFlower","redSwoosh",
     "yellowCrown", "blackCat", "paperMoon", "whiteFlower", "yellowSparkle", "yellowSun", 
-    "purpleGreenFlowers", "moonPhases", "newspaperCat", "orangeButton", "blueBox", 
+    "purpleGreenFlowers", "moonPhases", "orangeButton", "blueBox", 
     "blueShoe", "blueShape", "blueHeart", "blueFire"
 ];
 const pageTitle = [
