@@ -3,7 +3,10 @@ const stickerArray = [
     "blueCrescentStar","blueMoon","blueMusicNote","blueSquare",
     "blueStarSilhouette","greenCircle","greenSproutSilhouette",
     "orangeHeartSilhouette","orangeHeartTrio","orangeNote","pinkStarSilhouette",
-    "purpleMoonSilhouette","purpleRubble","purpleStar","redFlower","redSwoosh","yellowCrown"
+    "purpleMoonSilhouette","purpleRubble","purpleStar","redFlower","redSwoosh",
+    "yellowCrown", "blackCat", "paperMoon", "whiteFlower", "yellowSparkle", "yellowSun", 
+    "purpleGreenFlowers", "moonPhases", "newspaperCat", "orangeButton", "blueBox", 
+    "blueShoe", "blueShape", "blueHeart", "blueFire"
 ];
 const pageTitle = [
     "landingPage","showcase","scrapbook","reverseCover"
